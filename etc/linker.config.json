@@ -1,0 +1,30 @@
+{
+	"provideLibs": [	
+		    "libandroid_net_connectivity_com_android_net_module_util_jni-x86_64-v2.so",
+		    "libandroid_net_connectivity_com_android_net_module_util_jni.so",
+		    "libdummy_connectivity-x86_64-v2.so",
+		    "libdummy_connectivity.so",
+		    "libframework-connectivity-jni-x86_64-v2.so",
+		    "libframework-connectivity-jni.so",
+		    "libnetd_updatable-x86_64-v2.so",
+		    "libnetd_updatable.so",
+		    "libnetdutils-x86_64-v2.so",
+		    "libnetdutils.so",
+		    "libnetworkstats-x86_64-v2.so",
+		    "libnetworkstats.so",
+		    "libservice-connectivity-x86_64-v2.so",
+		    "libservice-connectivity.so"
+	],
+	"requireLibs": [	
+		    "libandroid.so",
+		    "libbase.so",
+		    "libc++.so",
+		    "libc.so",
+		    "libcutils.so",
+		    "libdl.so",
+		    "liblog.so",
+		    "libm.so",
+		    "libnativehelper.so"
+	],
+	"visible": true
+}

@@ -1,0 +1,163 @@
+// Auto-generated prebuilt APEX Blueprint for com.android.tethering
+// Staged from APEX package: connectivity (com.android.tethering)
+
+package {
+    default_applicable_licenses: ["Android-Apache-2.0"],
+}
+
+prebuilt_apex {
+    name: "com.android.tethering",
+    apex_name: "com.android.tethering",
+    source_apex_name: "com.android.tethering",
+    arch: {
+        arm64: {
+            src: "com.android.tethering.apex",
+        },
+        x86_64: {
+            src: "com.android.tethering.apex",
+        },
+    },
+    filename: "com.android.tethering.apex",
+    prefer: true,
+    installable: true,
+}
+
+cc_library_headers {
+    name: "bpf_connectivity_headers",
+    export_include_dirs: ["include"],
+    apex_available: [
+        "//apex_available:platform",
+        "com.android.tethering",
+    ],
+}
+
+cc_library_headers {
+    name: "libnetd_utils_headers",
+    export_include_dirs: ["include"],
+    apex_available: [
+        "//apex_available:platform",
+        "com.android.tethering",
+    ],
+}
+
+cc_prebuilt_library_static {
+    name: "netd_aidl_interface-lateststable-ndk",
+    srcs: ["lib64/libnetd_aidl_interface-lateststable-ndk.a"],
+    export_include_dirs: ["include"],
+    apex_available: [
+        "//apex_available:platform",
+        "com.android.resolv",
+        "com.android.tethering",
+    ],
+}
+
+cc_prebuilt_library_static {
+    name: "netd_event_listener_interface-lateststable-ndk",
+    srcs: ["lib64/libnetd_event_listener_interface-lateststable-ndk.a"],
+    export_include_dirs: ["include"],
+    apex_available: [
+        "//apex_available:platform",
+        "com.android.resolv",
+        "com.android.tethering",
+    ],
+}
+
+cc_prebuilt_library_static {
+    name: "libnet_utils_device_common_bpfutils",
+    srcs: ["lib64/libnet_utils_device_common_bpfutils.a"],
+    export_include_dirs: ["include"],
+}
+
+cc_prebuilt_library_static {
+    name: "libnet_utils_device_common_bpfjni",
+    srcs: ["lib64/libnet_utils_device_common_bpfjni.a"],
+    export_include_dirs: ["include"],
+}
+
+cc_prebuilt_library_static {
+    name: "libip_checksum",
+    srcs: ["lib64/libip_checksum.a"],
+    export_include_dirs: ["include"],
+}
+
+cc_prebuilt_library_static {
+    name: "libnetjniutils",
+    srcs: ["lib64/libnetjniutils.a"],
+    export_include_dirs: ["include"],
+}
+
+cc_prebuilt_library_static {
+    name: "libtcutils",
+    srcs: ["lib64/libtcutils.a"],
+    export_include_dirs: ["include"],
+}
+
+cc_prebuilt_library_static {
+    name: "libnetdutils",
+    srcs: ["lib64/libnetdutils.a"],
+    export_include_dirs: ["include"],
+}
+
+cc_prebuilt_library_static {
+    name: "libnetd_updatable_static",
+    srcs: ["lib64/libnetd_updatable.a"],
+    export_include_dirs: ["include"],
+}
+
+cc_prebuilt_library_static {
+    name: "libtraffic_controller",
+    srcs: ["lib64/libtraffic_controller.a"],
+    export_include_dirs: ["include"],
+}
+
+cc_prebuilt_library_static {
+    name: "libclat",
+    srcs: ["lib64/libclat.a"],
+    export_include_dirs: ["include"],
+}
+
+cc_prebuilt_library_static {
+    name: "libnetworkstats",
+    srcs: ["lib64/libnetworkstats.a"],
+    export_include_dirs: ["include"],
+}
+
+cc_prebuilt_library_shared {
+    name: "libnetd_updatable",
+    srcs: ["lib64/libnetd_updatable.so"],
+    export_include_dirs: ["include"],
+    apex_available: [
+        "//apex_available:platform",
+        "com.android.tethering",
+    ],
+}
+
+cc_prebuilt_library_shared {
+    name: "libframework-connectivity-jni",
+    srcs: ["lib64/libframework-connectivity-jni.so"],
+    export_include_dirs: ["include"],
+    apex_available: [
+        "//apex_available:platform",
+        "com.android.tethering",
+    ],
+}
+
+cc_prebuilt_library_shared {
+    name: "libandroid_net_connectivity_com_android_net_module_util_jni",
+    srcs: ["lib64/libandroid_net_connectivity_com_android_net_module_util_jni.so"],
+    export_include_dirs: ["include"],
+    apex_available: [
+        "//apex_available:platform",
+        "com.android.tethering",
+    ],
+}
+
+cc_prebuilt_library_shared {
+    name: "libservice-connectivity",
+    srcs: ["lib64/libservice-connectivity.so"],
+    export_include_dirs: ["include"],
+    apex_available: [
+        "//apex_available:platform",
+        "com.android.tethering",
+    ],
+}

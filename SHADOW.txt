@@ -1,0 +1,11 @@
+Prebuilt Target APEX Shadow Repository
+Component: packages/modules/Connectivity
+Package: com.android.tethering
+Target API: 34
+Arch: x86_64
+Built-By: ag-build / makeapex
+Artifacts:
+  - com.android.tethering.apex (runtime APEX container)
+  - include/ (flattened platform & AIDL C++ headers)
+  - lib64/ (prebuilt shared and static archives)
+  - etc/bpf/ (BPF programs)
