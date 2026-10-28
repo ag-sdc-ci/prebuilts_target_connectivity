@@ -1,0 +1,36 @@
+package {
+    default_applicable_licenses: ["Android-Apache-2.0"],
+}
+
+filegroup {
+    name: "framework-connectivity-aidl-export-sources",
+    srcs: [
+        "aidl-export/**/*.aidl",
+    ],
+    path: "aidl-export",
+    visibility: [
+        "//visibility:public",
+    ],
+}
+
+filegroup {
+    name: "framework-connectivity-internal-sources",
+    srcs: [
+        "src/**/*.aidl",
+    ],
+    path: "src",
+    visibility: [
+        "//visibility:public",
+    ],
+}
+
+filegroup {
+    name: "framework-connectivity-sources",
+    srcs: [
+        ":framework-connectivity-internal-sources",
+        ":framework-connectivity-aidl-export-sources",
+    ],
+    visibility: [
+        "//visibility:public",
+    ],
+}
