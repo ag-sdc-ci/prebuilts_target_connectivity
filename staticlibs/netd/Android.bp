@@ -1,0 +1,170 @@
+package {
+    default_applicable_licenses: ["Android-Apache-2.0"],
+}
+
+aidl_interface {
+    name: "netd_aidl_interface",
+    local_include_dir: "binder",
+    srcs: [
+        "binder/android/net/INetd.aidl",
+        // AIDL interface that callers can implement to receive networking events from netd.
+        "binder/android/net/INetdUnsolicitedEventListener.aidl",
+        "binder/android/net/InterfaceConfigurationParcel.aidl",
+        "binder/android/net/IpSecMigrateInfoParcel.aidl",
+        "binder/android/net/MarkMaskParcel.aidl",
+        "binder/android/net/NativeNetworkConfig.aidl",
+        "binder/android/net/NativeNetworkType.aidl",
+        "binder/android/net/NativeVpnType.aidl",
+        "binder/android/net/RouteInfoParcel.aidl",
+        "binder/android/net/TetherConfigParcel.aidl",
+        "binder/android/net/TetherOffloadRuleParcel.aidl",
+        "binder/android/net/TetherStatsParcel.aidl",
+        "binder/android/net/UidRangeParcel.aidl",
+        // Add new AIDL classes in android.net.netd.aidl to consist with other network modules.
+        "binder/android/net/netd/aidl/**/*.aidl",
+    ],
+    backend: {
+        cpp: {
+            gen_log: true,
+        },
+        java: {
+            apex_available: [
+                "//apex_available:platform",
+                "com.android.tethering",
+                "com.android.wifi",
+            ],
+            min_sdk_version: "30",
+        },
+        ndk: {
+            apex_available: [
+                "//apex_available:platform",
+                "com.android.tethering",
+            ],
+            min_sdk_version: "30",
+        },
+    },
+    versions_with_info: [
+        {
+            version: "1",
+            imports: [],
+        },
+        {
+            version: "2",
+            imports: [],
+        },
+        {
+            version: "3",
+            imports: [],
+        },
+        {
+            version: "4",
+            imports: [],
+        },
+        {
+            version: "5",
+            imports: [],
+        },
+        {
+            version: "6",
+            imports: [],
+        },
+        {
+            version: "7",
+            imports: [],
+        },
+        {
+            version: "8",
+            imports: [],
+        },
+        {
+            version: "9",
+            imports: [],
+        },
+        {
+            version: "10",
+            imports: [],
+        },
+        {
+            version: "11",
+            imports: [],
+        },
+        {
+            version: "12",
+            imports: [],
+        },
+        {
+            version: "13",
+            imports: [],
+        },
+        {
+            version: "14",
+            imports: [],
+        },
+    ],
+    frozen: true,
+}
+
+aidl_interface {
+    name: "netd_event_listener_interface",
+    local_include_dir: "binder",
+    srcs: [
+        "binder/android/net/metrics/INetdEventListener.aidl",
+    ],
+    backend: {
+        ndk: {
+            apex_available: [
+                "//apex_available:platform",
+                "com.android.resolv",
+            ],
+            min_sdk_version: "30",
+        },
+        java: {
+            apex_available: [
+                "//apex_available:platform",
+                "com.android.wifi",
+                "com.android.tethering",
+            ],
+            min_sdk_version: "30",
+        },
+    },
+    versions_with_info: [
+        {
+            version: "1",
+            imports: [],
+        },
+        {
+            version: "2",
+            imports: [],
+        },
+    ],
+    frozen: true,
+}
+
+aidl_interface {
+    name: "mdns_aidl_interface",
+    local_include_dir: "binder",
+    srcs: [
+        "binder/android/net/mdns/aidl/**/*.aidl",
+    ],
+    backend: {
+        java: {
+            sdk_version: "module_current",
+            apex_available: [
+                "//apex_available:platform",
+                "com.android.tethering",
+            ],
+            min_sdk_version: "30",
+        },
+    },
+    versions_with_info: [
+        {
+            version: "1",
+            imports: [],
+        },
+        {
+            version: "2",
+            imports: [],
+        },
+    ],
+    frozen: true,
+}
