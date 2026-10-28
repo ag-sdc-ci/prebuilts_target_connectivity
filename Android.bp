@@ -92,10 +92,20 @@ cc_prebuilt_library_static {
     export_include_dirs: ["include"],
 }
 
-cc_prebuilt_library_static {
+cc_prebuilt_library {
     name: "libnetdutils",
-    srcs: ["lib64/libnetdutils.a"],
+    static: {
+        srcs: ["lib64/libnetdutils.a"],
+    },
+    shared: {
+        srcs: ["lib64/libnetdutils.so"],
+    },
     export_include_dirs: ["include"],
+    apex_available: [
+        "//apex_available:platform",
+        "com.android.resolv",
+        "com.android.tethering",
+    ],
 }
 
 cc_prebuilt_library_static {
