@@ -2,8 +2,8 @@
 	"provideLibs": [	
 		    "libandroid_net_connectivity_com_android_net_module_util_jni-x86_64-v2.so",
 		    "libandroid_net_connectivity_com_android_net_module_util_jni.so",
-		    "libdummy_connectivity-x86_64-v2.so",
-		    "libdummy_connectivity.so",
+		    "libdummy_tethering-x86_64-v2.so",
+		    "libdummy_tethering.so",
 		    "libframework-connectivity-jni-x86_64-v2.so",
 		    "libframework-connectivity-jni.so",
 		    "libnetd_updatable-x86_64-v2.so",
@@ -18,6 +18,7 @@
 	"requireLibs": [	
 		    "libandroid.so",
 		    "libbase.so",
+		    "libbinder_ndk.so",
 		    "libc++.so",
 		    "libc.so",
 		    "libcutils.so",
