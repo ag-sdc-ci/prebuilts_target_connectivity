@@ -171,3 +171,28 @@ cc_prebuilt_library_shared {
         "com.android.tethering",
     ],
 }
+
+// -----------------------------------------------------------------------------
+// Connectivity Java API Libraries & Stubs
+// -----------------------------------------------------------------------------
+
+java_import {
+    name: "framework-connectivity.stubs.module_lib",
+    jars: ["share/connectivity/framework-connectivity.jar"],
+    sdk_version: "module_current",
+    visibility: ["//visibility:public"],
+}
+
+java_import {
+    name: "framework-connectivity-t.stubs.module_lib",
+    jars: ["share/connectivity/framework-connectivity-t.jar"],
+    sdk_version: "module_current",
+    visibility: ["//visibility:public"],
+}
+
+java_import {
+    name: "framework-tethering.stubs.module_lib",
+    jars: ["share/connectivity/framework-tethering.jar"],
+    sdk_version: "module_current",
+    visibility: ["//visibility:public"],
+}
