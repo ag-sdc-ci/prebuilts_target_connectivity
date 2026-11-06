@@ -179,6 +179,23 @@ cc_prebuilt_library_shared {
 java_import {
     name: "framework-connectivity.stubs.module_lib",
     jars: ["share/connectivity/framework-connectivity.jar"],
+    prefer: true,
+    sdk_version: "module_current",
+    visibility: ["//visibility:public"],
+}
+
+java_import {
+    name: "framework-connectivity.stubs.system",
+    jars: ["share/connectivity/framework-connectivity.jar"],
+    prefer: true,
+    sdk_version: "system_current",
+    visibility: ["//visibility:public"],
+}
+
+java_import {
+    name: "framework-connectivity",
+    jars: ["share/connectivity/framework-connectivity.jar"],
+    prefer: true,
     sdk_version: "module_current",
     visibility: ["//visibility:public"],
 }
@@ -186,6 +203,23 @@ java_import {
 java_import {
     name: "framework-connectivity-t.stubs.module_lib",
     jars: ["share/connectivity/framework-connectivity-t.jar"],
+    prefer: true,
+    sdk_version: "module_current",
+    visibility: ["//visibility:public"],
+}
+
+java_import {
+    name: "framework-connectivity-t.stubs.system",
+    jars: ["share/connectivity/framework-connectivity-t.jar"],
+    prefer: true,
+    sdk_version: "system_current",
+    visibility: ["//visibility:public"],
+}
+
+java_import {
+    name: "framework-connectivity-t",
+    jars: ["share/connectivity/framework-connectivity-t.jar"],
+    prefer: true,
     sdk_version: "module_current",
     visibility: ["//visibility:public"],
 }
@@ -193,6 +227,7 @@ java_import {
 java_import {
     name: "framework-tethering.stubs.module_lib",
     jars: ["share/connectivity/framework-tethering.jar"],
+    prefer: true,
     sdk_version: "module_current",
     visibility: ["//visibility:public"],
 }
